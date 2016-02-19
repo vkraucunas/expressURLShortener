@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+
+    <h1>{{ title }}</h1>
+    <p>Welcome to {{ title }}</p>
+    <br>
+
+
+    <a href="/about/Valerie">About</a>
+
+    <br><br>
+
+    {% for student in array %}
+        <p><a href="/about/{{student}}">{{student}}</a></p>
+
+    {%endfor%}
+
+    <br>
+
+    <form method="post" action="/form">
+        <input type="text" name="url">
+        <button type="submit">Submit</button>
+    </form>
+
+  </div>
+
+
+
+{% endblock %}
